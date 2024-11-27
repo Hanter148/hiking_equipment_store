@@ -1,0 +1,140 @@
+<div class="container">
+
+  <form *ngIf="!showEditForm" (ngSubmit)="addProduct()">
+    <div class="form-group">
+      <label for="productName">Назва товару</label>
+      <input id="productName" 
+             [(ngModel)]="productName" 
+             (ngModelChange)="onNameChange()" 
+             name="productName" 
+             class="form-control" 
+             placeholder="Назва товару" 
+             required />
+      <div *ngIf="nameError" class="text-danger">{{ nameError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="productDescription">Опис товару</label>
+      <textarea id="productDescription" 
+                [(ngModel)]="productDescription" 
+                (ngModelChange)="onDescriptionChange()" 
+                name="productDescription" 
+                class="form-control" 
+                placeholder="Опис товару" 
+                required></textarea>
+      <div *ngIf="descriptionError" class="text-danger">{{ descriptionError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="productImageUrl">URL картинки товару</label>
+      <input id="productImageUrl" 
+             [(ngModel)]="productImageUrl" 
+             (blur)="checkImageUrl()" 
+             name="productImageUrl" 
+             class="form-control" 
+             placeholder="URL картинки товару" 
+             required />
+      <div *ngIf="imageUrlError" class="text-danger">{{ imageUrlError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="productPrice">Ціна</label>
+      <input id="productPrice" 
+             type="number" 
+             [(ngModel)]="productPrice" 
+             name="productPrice" 
+             class="form-control" 
+             placeholder="Ціна" 
+             required />
+    </div>
+    <div class="form-group">
+      <label for="productCategory">Категорія товару</label>
+      <select id="productCategory" 
+              [(ngModel)]="productCategory" 
+              name="productCategory" 
+              class="form-control" 
+              required>
+        <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!isFormValid()">Додати товар</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Очистити</button>
+  </form>
+
+
+  <form *ngIf="showEditForm" (ngSubmit)="updateProduct()">
+    <h3>Редагувати товар</h3>
+    <div class="form-group">
+      <label for="editProductName">Назва товару</label>
+      <input id="editProductName" 
+             [(ngModel)]="productName" 
+             (ngModelChange)="onNameChange()" 
+             name="editProductName" 
+             class="form-control" 
+             placeholder="Назва товару" 
+             required />
+      <div *ngIf="nameError" class="text-danger">{{ nameError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="editProductDescription">Опис товару</label>
+      <textarea id="editProductDescription" 
+                [(ngModel)]="productDescription" 
+                (ngModelChange)="onDescriptionChange()" 
+                name="editProductDescription" 
+                class="form-control" 
+                placeholder="Опис товару" 
+                required></textarea>
+      <div *ngIf="descriptionError" class="text-danger">{{ descriptionError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="editProductImageUrl">URL картинки товару</label>
+      <input id="editProductImageUrl" 
+             [(ngModel)]="productImageUrl" 
+             (blur)="checkImageUrl()" 
+             name="editProductImageUrl" 
+             class="form-control" 
+             placeholder="URL картинки товару" 
+             required />
+      <div *ngIf="imageUrlError" class="text-danger">{{ imageUrlError }}</div>
+    </div>
+    <div class="form-group">
+      <label for="editProductPrice">Ціна</label>
+      <input id="editProductPrice" 
+             type="number" 
+             [(ngModel)]="productPrice" 
+             name="editProductPrice" 
+             class="form-control" 
+             placeholder="Ціна" 
+             required />
+    </div>
+    <div class="form-group">
+      <label for="editProductCategory">Категорія товару</label>
+      <select id="editProductCategory" 
+              [(ngModel)]="productCategory" 
+              name="editProductCategory" 
+              class="form-control" 
+              required>
+        <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!isFormValid()">Оновити товар</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Закрити</button>
+  </form>
+
+  <h3>Список товарів</h3>
+  <div *ngFor="let product of products" class="product-item">
+    <img [src]="product.imageUrl" alt="{{product.name}}" class="product-image" />
+    <h4>{{product.name}}</h4>
+    <p>{{product.description}}</p>
+    <p>Ціна: {{product.price}} $</p>
+    <p>Категорія: {{product.category}}</p>
+    <button class="btn btn-warning" (click)="openEditForm(product)">Редагувати</button>
+    <button class="btn btn-danger" (click)="confirmDeleteProduct(product.id)">Видалити</button>
+  </div>
+
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <h4>Підтвердження видалення</h4>
+      <p>Ви впевнені, що хочете видалити цей товар?</p>
+      <button class="btn btn-danger" (click)="deleteProduct(); closeModal()">Так</button>
+      <button class="btn btn-secondary" (click)="closeModal()">Ні</button>
+    </div>
+  </div>
+</div>

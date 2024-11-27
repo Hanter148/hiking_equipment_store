@@ -1,0 +1,15 @@
+<div class="login-container">
+    <form (ngSubmit)="login()" class="login-form">
+      <img src="/icons/logo.png" alt="Logo" class="logo" />
+      <div class="form-group">
+        <label for="username">Логін</label>
+        <input id="username" [(ngModel)]="username" name="username" class="form-control" placeholder="Логін" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Пароль" required />
+      </div>
+      <button type="submit" class="btn btn-success">Вхід</button>
+      <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+    </form>
+  </div>  

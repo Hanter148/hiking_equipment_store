@@ -1,0 +1,63 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ddd; 
+  border-radius: 0.375rem; 
+  overflow: hidden; 
+}
+
+.card-img-top {
+  height: 150px;
+  object-fit: cover; 
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+}
+
+.carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+.btn-outline-primary {
+  margin: 0.25rem;
+}
+
+.pagination .page-link {
+  padding: 0.5rem 1rem;
+}
+
+.page-link{
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 120px;
+  }
+  .carousel-item img {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}

@@ -1,0 +1,102 @@
+.navbar {
+  margin-bottom: 20px;
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16' /%3e%3c/svg%3e");
+}
+
+.navbar-nav {
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.nav-link:hover .cart-icon {
+  transform: scale(1.1);
+}
+
+.custom-badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.2rem;
+  background-color: #dc3545;
+}
+
+.cart-icon {
+  height: 20px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-brand {
+    margin-right: auto;
+  }
+}
+
+.navbar-collapse {
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.navbar-collapse.collapse.show {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
+}
+
+.navbar-nav .nav-link {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-nav .nav-link:last-child {
+  border-bottom: none;
+}

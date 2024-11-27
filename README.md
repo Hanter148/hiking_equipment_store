@@ -1,27 +1,59 @@
-# MyApp
+# TERRA - Онлайн-магазин туристичного спорядження
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+TERRA - це онлайн-магазин, спеціалізований на продажу туристичного спорядження. Наш сайт пропонує широкий вибір товарів для активного відпочинку, включаючи ліхтарики, розумні годинники, навушники, туристичні камери та намети.
 
-## Development server
+## Зміст
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Опис](#опис)
+- [Функціональні можливості](#функціональні-можливості)
+- [Технічні вимоги](#технічні-вимоги)
+- [Інсталяція та запуск](#інсталяція-та-запуск)
+- [Тестування](#тестування)
+- [Автор](Євгеній Галущак - Основний розробник)
 
-## Code scaffolding
+## Опис
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Цей проект використовує Angular для фронтенду та Express.js для бекенду. Додаток включає інтерактивний карусель для перегляду товарів і можливість фільтрації за категоріями.
 
-## Build
+## Функціональні можливості
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Карусель для перегляду зображень товарів.
+- Фільтрація товарів за категоріями.
+- Пошук товарів за назвою.
+- Респонсивний дизайн для мобільних пристроїв.
 
-## Running unit tests
+## Технічні вимоги
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js (версія 14 або вище)
+- Angular CLI
+- npm
 
-## Running end-to-end tests
+## Інсталяція та запуск
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Клонуйте репозиторій:
+    ```bash
+    git clone https://github.com/мій-репозиторій/terra-online-store.git
+    ```
 
-## Further help
+2. Перейдіть у каталог проекту:
+    ```bash
+    cd terra-online-store
+    ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. Встановіть залежності:
+    ```bash
+    npm install
+    ```
+
+4. Запустіть сервер для розробки:
+    ```bash
+    npm start
+    ```
+
+5. Відкрийте браузер і перейдіть за адресою `http://localhost:4200` для перегляду веб-додатку.
+
+## Тестування
+
+Щоб запустити тести, використовуйте команду:
+```bash
+npm test

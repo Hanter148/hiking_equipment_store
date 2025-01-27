@@ -1,3 +1,7 @@
+<h1 align="center">Hi 👋, I'm Yevheniy Galushchak</h1>
+<h3 align="center">Frontend developer from Ukraine</h3>
+<h3 align="center">Пропоную вашій увазі мій проект інтернет-магазину туристичного спорядження TERRA. Це сучасний та зручний веб-додаток, створений для любителів активного відпочинку, що пропонує широкий асортимент товарів для туризму.</h3>
+
 # TERRA - Онлайн-магазин туристичного спорядження
 
 **TERRA** — це онлайн-магазин, спеціалізований на продажу туристичного спорядження. Наш сайт пропонує широкий вибір товарів для активного відпочинку, включаючи ліхтарики, розумні годинники, навушники, туристичні камери та намети.
@@ -42,4 +46,12 @@
 ## Автор
 Yevheniy Galushchak — Основний розробник.
 ### Зв'яжіться зі мною:
+- 📫 How to reach me **hanter_ck@ukr.net**
 
+<h3 align="center">Connect with me:</h3>
+<p align="center">
+<a href="https://www.instagram.com/yevheniy_frontend_developer/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="burdeinyi.1" height="30" width="40" /></a>
+  <a href="https://t.me/YevgeniyHant" target="blank">
+  <img align="center" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/telegram.svg" alt="Riched1" height="30" width="40" />
+</a>
+</p>

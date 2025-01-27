@@ -42,5 +42,4 @@
 ## Автор
 Yevheniy Galushchak — Основний розробник.
 ### Зв'яжіться зі мною:
-- Я використав ярлички (шильдики) із сервісу [Shields.io](https://shields.io/) для Instagram та Telegram.
-- Вставте ваші реальні посилання на сторінки Instagram і Telegram у відповідні місця (`https://instagram.com/ваш-акаунт` і `https://t.me/ваш-акаунт`).
+
